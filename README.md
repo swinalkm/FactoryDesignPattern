@@ -13,29 +13,29 @@
 		- **GoldCard**
 		- **PlatinumCard**
 	- interfacing Card, we would have **ICard** with following methods
-		--> { bool DoesCardExists(int id) } 
-		--> { Card CreateCard(int id) }
-		**SilverCard : ICard**
-			//silver card may have different business for CreateCard() and DoesCardExists() 
-		**GoldCard : ICard**
-			//gold card may have different business for CreateCard() and DoesCardExists() 
-		**PlatinumCard : ICard**
-			//platinum card may have different business for CreateCard() and DoesCardExists() 
+		- --> { bool DoesCardExists(int id) } 
+		- --> { Card CreateCard(int id) }
+		- **SilverCard : ICard**
+			- //silver card may have different business for CreateCard() and DoesCardExists() 
+		- **GoldCard : ICard**
+			- //gold card may have different business for CreateCard() and DoesCardExists() 
+		- **PlatinumCard : ICard**
+			- //platinum card may have different business for CreateCard() and DoesCardExists() 
 			
 		- but all will **at the end return a Card** when card is created
 		- and true/false when DoesCardExists()
 	- Now lets have a Factory,**ICardFactory** with following method
-		--> { ICard GetCard() }
-		**CardFactory:ICardFactory**
-			// GetCard will decide based on its business logic if it wants to **return SilverCard/GoldCard/PlatinumCard of type ICard**
-		// i,e 
-		CardFactory:ICardFactory
-		{
-			ICard GetCard()
-			{
-				return new SilverCard();
-			}
-		}
+		- --> { ICard GetCard() }
+		- **CardFactory:ICardFactory**
+			- // GetCard will decide based on its business logic if it wants to **return SilverCard/GoldCard/PlatinumCard of type ICard**
+		- // i,e 
+		- CardFactory:ICardFactory
+		- {
+		-	ICard GetCard()
+		-	{
+		-		return new SilverCard();
+		-	}
+		- }
 					
 	- In short, **a factory will always return an object of IProduct**, and based on behaviour of IProduct we can exicute business
 	
