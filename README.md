@@ -38,6 +38,8 @@
 		- }
 					
 	- In short, **a factory will always return an object of IProduct**, and based on behaviour of IProduct we can exicute business
+![Factory](https://user-images.githubusercontent.com/73112786/109827748-0657f900-7c62-11eb-975d-9087bc0fc801.PNG)
+
 	
 - advantage
 	- if i want to and another product say, diamondCard i can easily add so without any change in design and hirerchy
